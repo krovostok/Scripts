@@ -51,7 +51,7 @@ sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 sudo pacman -Sy
 
 # install basic stuff
-yes | sudo pacman -S --needed micro neofetch alacarte firefox
+yes | sudo pacman -S --needed micro neofetch menulibre firefox
 
 # clean up
 sudo ./Scripts/cleaner.sh
