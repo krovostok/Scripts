@@ -18,16 +18,18 @@ sudo sed -i '/^options / s/$/ quiet splash nvidia_drm.modeset=1/' "${entry_dir}$
 sudo sed -i '/#Color/s/^#//' /etc/pacman.conf
 sudo sed -i '/#ParallelDownloads = 5/s/^#//; s/5/4/' /etc/pacman.conf
 
-# install gnome, fonts, nvidia drivers, pipewire, bluez and fish
+# install gnome, fonts, nvidia drivers, pipewire, bluez, power profiles and fish
 sudo pacman -S \
 gnome gnome-tweaks gst-plugins-base gst-plugins-good \
 ttf-ibm-plex ttf-joypixels ttf-font-awesome \
 nvidia nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
 bluez bluez-utils \
+power-profiles-daemon \
 fish
 sudo systemctl enable gdm
 sudo systemctl enable bluetooth
+sudo systemctl enable power-profiles-daemon
 chsh -s $(which fish)
 xdg-user-dirs-update
 
@@ -48,4 +50,6 @@ sudo pacman -Sy
 sudo pacman -S nano neofetch menulibre firefox adw-gtk3
 
 # clean up
-sudo ./Scripts/cleaner.sh
+sudo pacman -Scc
+sudo pacman -Qtdq | sudo pacman -Rns -
+sudo pacman -Qqd | sudo pacman -Rsu -
