@@ -47,7 +47,7 @@ sudo pacman -Sy
 yes | sudo pacman -S --needed micro neofetch menulibre firefox adw-gtk3
 
 # clean up
-sudo ./Scripts/cleaner.sh
+yes | sudo ./Scripts/cleaner.sh
 
 # reboot
 reboot
