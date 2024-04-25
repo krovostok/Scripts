@@ -18,7 +18,7 @@ sed -i '/^options / s/$/ quiet splash nvidia_drm.modeset=1/' "${entry_dir}${entr
 sudo sed -i '/#Color/s/^#//' /etc/pacman.conf
 sudo sed -i '/#ParallelDownloads = 5/s/^#//; s/5/4/' /etc/pacman.conf
 
-# install gnome (and strip it a little), fonts, nvidia drivers, pipewire, bluez and fish
+# install gnome, fonts, nvidia drivers, pipewire, bluez and fish
 yes | sudo pacman -S \
 gnome gnome-tweaks gst-plugins-base gst-plugins-good \
 noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji ttf-ubuntu-font-family ttf-hack \
