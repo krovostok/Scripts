@@ -23,7 +23,7 @@ sudo pacman -S \
 gnome gnome-tweaks gst-plugins-base gst-plugins-good \
 ttf-ibm-plex ttf-joypixels ttf-font-awesome \
 nvidia nvidia-utils nvidia-settings nvidia-prime \
-pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse \
+pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
 bluez bluez-utils \
 fish
 sudo systemctl enable gdm
