@@ -32,8 +32,7 @@ chsh -s $(which fish)
 xdg-user-dirs-update
 
 # fuck flatpak!
-sudo pacman -R gnome-software
-sudo pacman -Rdd flatpak
+sudo pacman -Rdd gnome-software epiphany flatpak ostree
 
 # enable chaotic-AUR
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
@@ -46,7 +45,7 @@ sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman
 sudo pacman -Sy
 
 # install misc. stuff
-sudo pacman -S --needed micro neofetch menulibre firefox adw-gtk3
+sudo pacman -S nano neofetch menulibre firefox adw-gtk3
 
 # clean up
 sudo ./Scripts/cleaner.sh
