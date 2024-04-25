@@ -20,7 +20,7 @@ sudo sed -i '/#ParallelDownloads = 5/s/^#//; s/5/4/' /etc/pacman.conf
 
 # install gnome, fonts, nvidia drivers, pipewire, bluez, power profiles and fish
 sudo pacman -S \
-gnome gnome-tweaks gst-plugins-base gst-plugins-good \
+gnome gnome-tweaks gnome-browser-connector gst-plugins-base gst-plugins-good \
 ttf-ibm-plex ttf-joypixels ttf-font-awesome \
 nvidia nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
