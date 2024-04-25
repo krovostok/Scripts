@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # post-install script for arch linux (gnome edition)
-# to be used after archinstall ('minimal' profile, no audio server, with nm)
+# to be used after archinstall (systemd-boot, 'minimal' profile, no audio server, with nm)
 
 # update the system
 sudo pacman -Syu
