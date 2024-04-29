@@ -25,7 +25,7 @@ ttf-ibm-plex ttf-joypixels noto-fonts noto-fonts-cjk \
 nvidia nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
 bluez bluez-utils \
-power-profiles-daemon \
+power-profiles-daemon
 sudo systemctl enable sddm
 sudo systemctl enable bluetooth
 sudo systemctl enable power-profiles-daemon
