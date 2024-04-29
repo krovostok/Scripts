@@ -18,7 +18,7 @@ sudo sed -i '/^options / s/$/ quiet splash nvidia_drm.modeset=1/' "${entry_dir}$
 sudo sed -i '/#Color/s/^#//' /etc/pacman.conf
 sudo sed -i '/#ParallelDownloads = 5/s/^#//; s/5/4/' /etc/pacman.conf
 
-# install gnome, fonts (i hate noto fonts), nvidia drivers, pipewire, bluez, power profiles and fish
+# install gnome, fonts (i hate noto fonts), nvidia drivers, pipewire, bluez, power profiles
 sudo pacman -S \
 gnome gnome-tweaks gnome-browser-connector gst-plugins-base gst-plugins-good \
 ttf-ibm-plex ttf-joypixels noto-fonts noto-fonts-cjk \
@@ -26,15 +26,13 @@ nvidia nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
 bluez bluez-utils \
 power-profiles-daemon \
-fish
 sudo systemctl enable gdm
 sudo systemctl enable bluetooth
 sudo systemctl enable power-profiles-daemon
-chsh -s $(which fish)
 xdg-user-dirs-update
 
 # fuck flatpak and listed packages!
-sudo pacman -Rdd flatpak ostree gnome-software epiphany
+sudo pacman -Rdd flatpak gnome-software epiphany
 
 # enable chaotic-AUR
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
