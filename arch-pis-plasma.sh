@@ -20,7 +20,7 @@ sudo sed -i '/#ParallelDownloads = 5/s/^#//; s/5/4/' /etc/pacman.conf
 
 # install plasma, fonts (i hate noto fonts), nvidia drivers, pipewire, bluez, power profiles
 sudo pacman -S \
-plasma konsole dolphin kate gwenview ocular kdegraphics-thumbnailers ffmpegthumbs \
+plasma konsole dolphin kate gwenview okular kdegraphics-thumbnailers ffmpegthumbs \
 ttf-ibm-plex ttf-joypixels noto-fonts noto-fonts-cjk \
 nvidia nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
