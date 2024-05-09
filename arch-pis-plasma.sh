@@ -61,4 +61,5 @@ sudo pacman -Scc
 sudo pacman -Qtdq | sudo pacman -Rns -
 sudo pacman -Qqd | sudo pacman -Rsu -
 
+# shout out to Tomas, Igor, Barbim and Sino
 # HEIL BEIDAT, HEIL A.O.D.
