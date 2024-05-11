@@ -46,7 +46,7 @@ sudo pacman -Sy
 
 # install misc. stuff and apps i use!
 sudo pacman -S nano neofetch firefox telegram-desktop discord spotify \
-heroic-games-launcher path-of-building-community-git qbittorrent onlyoffice
+heroic-games-launcher path-of-building-community-git krita qbittorrent onlyoffice
 
 # gaming stuff and libs (from https://github.com/lutris/docs/blob/master/WineDependencies.md)
 sudo pacman -S --needed wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls \
