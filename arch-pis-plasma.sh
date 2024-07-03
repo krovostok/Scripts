@@ -21,7 +21,7 @@ sudo sed -i '/#ParallelDownloads = 5/s/^#//; s/5/4/' /etc/pacman.conf
 # install plasma, fonts (i fucking hate noto fonts), nvidia drivers, pipewire, bluez, power profiles
 sudo pacman -S \
 plasma konsole dolphin ark kate gwenview dragon okular spectacle kdegraphics-thumbnailers ffmpegthumbs \
-noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-hack\
+noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-hack \
 nvidia nvidia-utils lib32-nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
 bluez bluez-utils \
