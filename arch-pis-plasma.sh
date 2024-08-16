@@ -22,7 +22,7 @@ sudo sed -i '/#ParallelDownloads = 5/s/^#//; s/5/4/' /etc/pacman.conf
 sudo pacman -S \
 plasma konsole dolphin ark kate gwenview dragon okular spectacle kdegraphics-thumbnailers ffmpegthumbs \
 noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-hack \
-nvidia nvidia-utils lib32-nvidia-utils nvidia-settings nvidia-prime \
+nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
 bluez bluez-utils \
 power-profiles-daemon
@@ -61,4 +61,4 @@ sudo pacman -Scc
 sudo pacman -Qtdq | sudo pacman -Rns -
 sudo pacman -Qqd | sudo pacman -Rsu -
 
-# shout out to Tomas, Igor, Barbim and Sino
+# shout out to Yulya, Tomas, Igor, Barbim and Sino
