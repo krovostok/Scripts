@@ -18,14 +18,19 @@ sudo sed -i '/^options / s/$/ quiet splash nvidia_drm.modeset=1/' "${entry_dir}$
 sudo sed -i '/#Color/s/^#//' /etc/pacman.conf
 sudo sed -i '/#ParallelDownloads = 5/s/^#//; s/5/4/' /etc/pacman.conf
 
-# install plasma, fonts (i fucking hate noto fonts), nvidia drivers, pipewire, bluez, power profiles
+# install plasma, fonts (i fucking hate noto fonts), nvidia drivers, pipewire, bluez, razer stuff, power profiles
 sudo pacman -S \
+linux-headers \
 plasma konsole dolphin ark kate gwenview dragon okular spectacle kdegraphics-thumbnailers ffmpegthumbs \
 noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-hack \
 nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
 bluez bluez-utils \
+openrazer-driver-dkms openrazer-daemon python-openrazer polychromatic \
 power-profiles-daemon
+
+# enable stuff above
+sudo gpasswd -a $USER plugdev
 sudo systemctl enable sddm
 sudo systemctl enable bluetooth
 sudo systemctl enable power-profiles-daemon
@@ -61,4 +66,4 @@ sudo pacman -Scc
 sudo pacman -Qtdq | sudo pacman -Rns -
 sudo pacman -Qqd | sudo pacman -Rsu -
 
-# shout out to Yulya, Tomas, Igor, Barbim and Sino
+# shout out to Yulia, Tomas, Igor, Barbim and Sino
