@@ -26,7 +26,7 @@ inter-font noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-hack \
 nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings nvidia-prime \
 pipewire pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse wireplumber \
 bluez bluez-utils \
-openrazer-driver-dkms openrazer-daemon python-openrazer polychromatic \
+openrazer-driver-dkms openrazer-daemon python-openrazer \
 libimobiledevice usbmuxd kimageformats libheif \
 power-profiles-daemon
 
@@ -51,7 +51,7 @@ sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman
 sudo pacman -Sy
 
 # install other basic stuff
-sudo pacman -S nano neofetch firefox \
+sudo pacman -S nano neofetch firefox polychromatic
 
 # deprecated (for now)
 # gaming stuff and libs (from https://github.com/lutris/docs/blob/master/WineDependencies.md)
