@@ -38,7 +38,7 @@ sudo systemctl enable power-profiles-daemon
 xdg-user-dirs-update
 
 # fuck flatpak and listed packages!
-sudo pacman -Rdd flatpak flatpak-kcm discover oxygen oxygen-sounds
+sudo pacman -Rdd flatpak flatpak-kcm discover krdp oxygen oxygen-sounds 
 
 # enable chaotic-AUR
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
